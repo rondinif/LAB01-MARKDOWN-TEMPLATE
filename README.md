@@ -10,7 +10,7 @@ cd LAB01-MARKDOWN-TEMPLATE
 npm i
 npm test
 ```
-### outpput
+### rendered output
 ``` html 
 <h1>primo capitolo</h1>
 <p>Questa seemplissima demo mostra come utilizzare <strong>handlebars</strong> insieme a <strong>markdown</strong>, ed ora possiamo dire:</p>
