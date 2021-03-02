@@ -1,0 +1,15 @@
+{
+  "name": "lab01-markdown-template",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test.js"
+  },
+  "author": "Franco Rondini",
+  "license": "MIT",
+  "dependencies": {
+    "handlebars": "^4.7.7",
+    "markdown-it": "^12.0.4"
+  }
+}
