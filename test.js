@@ -16,28 +16,26 @@ let data = {
 };
 // carico la template markdown + handlebars
 // const markdownText = fs.readFileSync(path.resolve(__dirname, 'myMarkDownemplateWithHandlebars.md')).toString('utf8')
-var markdownText = `
+var markdownTemplate = `
 # primo capitolo
 Questa seemplissima demo mostra come utilizzare **handlebars** insieme a **markdown**, ed ora possiamo dire:  
-  <div>
-    <span>Handlebars <b>{{doesWhat}}</b> in markdown!</span>
-  </div>
+  
+\`\`\`    
+Handlebars *{{doesWhat}}* in markdown!
+\`\`\`    
 
 # secondo capitolo
 se abbiamo un [Array](https://developer.mozilla.org/it/docs/Web/JavaScript/Reference/Global_Objects/Array) possiamo 
 dinaminamicamente creare un elenco puntato come questo: 
-<ul class="people_list">
   {{#each people}}
-  <li>{{this}}</li>
+  - {{this}}
   {{/each}}
-</ul>
 `;
-var template = md.render(markdownText);
+
 let Handlebars = require("handlebars");
-
-
-let render = Handlebars.compile(template);
-let view = render(data);
-console.log(view);
+let renderMarkdown = Handlebars.compile(markdownTemplate);
+let markdownView = renderMarkdown(data);
+var htmlView = md.render(markdownView);
+console.log(htmlView);
 
 
